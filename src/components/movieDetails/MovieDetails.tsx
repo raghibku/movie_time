@@ -10,7 +10,7 @@ const MovieDetails: React.FC<MovieDetailsProps> = ({movieDetail}) => {
     return (
         <div className='flex justify-start items-start gap-4 bg-cover bg-center text-white py-10 px-4'
             style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
             }}
         >
 

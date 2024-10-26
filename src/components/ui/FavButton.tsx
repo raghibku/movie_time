@@ -30,11 +30,11 @@ const FavButton:React.FC<ButtonProps> = ({ movie: { id, poster_path, title, rele
         <>
         {
             !favoriteMovies.includes(id)?
-            <button onClick={()=>handleAddToFav()} className="btn btn-outline">
+            <button onClick={()=>handleAddToFav()} className="btn btn-primary w-full max-w-[200px]">
                 Add To Favorite
             </button>
             :
-            <button onClick={()=>handleRemoveFromFav()} className="btn btn-outline">
+            <button onClick={()=>handleRemoveFromFav()} className="btn btn-primary w-full max-w-[200px]">
                 Remove from Favorite
             </button>
         }

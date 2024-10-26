@@ -16,7 +16,7 @@ const navlinks = [
 
 const Navbar = () => {
   return (
-    <ResponsiveDiv>
+    <div>
       <div className="navbar bg-primary text-primary-content">
         <div className="navbar-start">
           <div className="dropdown">
@@ -63,7 +63,7 @@ const Navbar = () => {
           <ThemeSwap/>
         </div>
       </div>
-    </ResponsiveDiv>
+    </div>
   )
 }
 

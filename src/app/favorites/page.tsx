@@ -14,7 +14,7 @@ const page = () => {
             <Title title_text='Favorite Movies' />
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 '>
               {
-                FavoriteMovies.map((movie: any) => <MovieCard key={movie.id} movie={movie} />)
+                FavoriteMovies.map((movie: any) => <MovieCard key={movie.id} movie={movie} showBtn={true} />)
               }
             </div>
           </div>
