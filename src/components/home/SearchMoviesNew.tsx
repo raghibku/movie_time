@@ -29,7 +29,6 @@ const SearchMovies: React.FC = () => {
     });
 
     const onSubmit = (data: SearchFormValues) => {
-        console.log("Searching for:", data.search);
         setSearchTerm(data.search);
     };
 
@@ -62,7 +61,7 @@ const SearchMovies: React.FC = () => {
             {isError && <p>Error fetching movies</p>}
             {searchedMovies && searchedMovies.length > 0 ? (
                 <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
-                    {searchedMovies.map((movie: any) => <MovieCard key={movie.id} movie={movie} />)}
+                    {searchedMovies.map((movie: any) => <MovieCard key={movie.id} movie={movie} showBtn={false}/>)}
                 </div>
             ) : (
                 <></>

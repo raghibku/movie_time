@@ -24,7 +24,6 @@ const FavButton:React.FC<ButtonProps> = ({ movie: { id, poster_path, title, rele
         const newList = favoriteMovies.filter(item=>item!==id)
         removeMovieFromList(id)
         setFavoriteMovies(newList)
-        console.log(newList)
     }
     return (
         <>

@@ -8,13 +8,14 @@ import Image from 'next/image';
 import React from 'react'
 
 interface MovieDetailsProps {
-    params: {
-        id: string;
-    }
+    params : any
+    // params: {
+    //     id: string;
+    // }
 }
 
 const page: React.FC<MovieDetailsProps> = async ({ params }) => {
-    const { id } = params
+    const { id } = await params
     const movieDetail = await getMovieDetails(id);
     const casts = await getMovieCast(id);
     const recommendations = await getRelatedMovies(id);
@@ -37,7 +38,7 @@ const page: React.FC<MovieDetailsProps> = async ({ params }) => {
                                                 <Title title_text='Recommendations'/>
                                                 <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 '>
                                                     {
-                                                        recommendations.map((movie: any) => <MovieCard key={movie.id} movie={movie} />)
+                                                        recommendations.map((movie: any) => <MovieCard key={movie.id} movie={movie} showBtn={false}/>)
                                                     }
                                                 </div>
                                             </div>

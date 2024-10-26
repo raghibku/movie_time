@@ -10,7 +10,6 @@ export const getSearchedMovies = async (title:string) => {
         throw new Error('Failed to fetch popular movies');
     }
     const data = await res.json()
-    console.log(data)
     return data.results
 }
-// https://api.themoviedb.org/3/search/movie?api_key=YOUR_API_KEY&query=...
+

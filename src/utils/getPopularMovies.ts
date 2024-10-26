@@ -6,6 +6,5 @@ export const getPopularMovies = async (page : number) => {
         throw new Error('Failed to fetch popular movies');
     }
     const data = await res.json()
-    // console.log(data.results)
     return data.results
 }

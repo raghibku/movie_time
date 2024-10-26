@@ -13,8 +13,6 @@ const PopularMovies = () => {
         queryFn: () => getPopularMovies(page),
         placeholderData: keepPreviousData
     });
-
-    console.log(isPlaceholderData)
     const popularMovieList = data || []
     const loadMoreMovies = () => setPage(prevPage => prevPage + 1);
     if (isLoading && page === 1) {

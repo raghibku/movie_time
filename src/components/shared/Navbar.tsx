@@ -1,5 +1,5 @@
 import Link from "next/link"
-import ResponsiveDiv from "./ResponsiveDiv"
+
 import { ThemeSwap } from "../ui/ThemeSwap"
 
 

@@ -1,4 +1,4 @@
-import ResponsiveDiv from "./ResponsiveDiv"
+
 
 
 const Footer = () => {

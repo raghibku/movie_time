@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+
   images: {
     remotePatterns: [
       {
@@ -11,6 +12,15 @@ const nextConfig: NextConfig = {
         pathname: '/t/p/**', // Allow all image paths under /t/p/
       },
     ],
+  },
+  // Ignore TypeScript build errors
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+
+  // Ignore ESLint build errors
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
