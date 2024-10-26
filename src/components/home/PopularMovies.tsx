@@ -1,17 +1,17 @@
 'use client'
 import { getPopularMovies } from '@/utils/getPopularMovies';
 import React, { useState } from 'react'
-import { useQuery, keepPreviousData } from '@tanstack/react-query';
+import { useQuery} from '@tanstack/react-query';
 import MovieCard from '../shared/MovieCard';
 import Title from '../shared/Title';
 
 const PopularMovies = () => {
     const [page, setPage] = useState(1)
 
-    const { data, error, isLoading, isFetching, isPlaceholderData } = useQuery({
+    const { data, error, isLoading, isFetching} = useQuery({
         queryKey: ["popularMovies", page],
         queryFn: () => getPopularMovies(page),
-        placeholderData: keepPreviousData
+        
     });
     const popularMovieList = data || []
     const loadMoreMovies = () => setPage(prevPage => prevPage + 1);
