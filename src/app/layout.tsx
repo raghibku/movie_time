@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
-
+import ReactQueryProvider from './ReactQueryProvider';
+import { FavoriteMoviesProvider } from "@/components/context/FavoriteMoviesContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Movie Time",
@@ -17,13 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`flex flex-col min-h-screen `}>
-          <Navbar />
-          <div className="flex flex-grow" >
-            {children}
-          </div>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <FavoriteMoviesProvider>
+            <div className={`flex flex-col min-h-screen `}>
+              <Navbar />
+              <div className="flex flex-grow" >
+                <ReactQueryProvider>{children}</ReactQueryProvider>
+              </div>
+              <Footer />
+            </div>
+          </FavoriteMoviesProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
