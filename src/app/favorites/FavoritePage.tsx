@@ -1,7 +1,8 @@
 'use client'
-import MovieCard from '@/components/shared/MovieCard'
-import Title from '@/components/shared/Title'
-import { getMoviesFromList } from '@/utils/handleLocalStorage'
+
+import MovieCard from '@/components/shared/MovieCard';
+import Title from '@/components/shared/Title';
+import { getMoviesFromList } from '@/utils/handleLocalStorage';
 import React, { useEffect, useState } from 'react'
 
 const FavoritePage = () => {

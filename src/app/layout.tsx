@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/shared/Navbar";
-import Footer from "@/components/shared/Footer";
 import ReactQueryProvider from './ReactQueryProvider';
 import { FavoriteMoviesProvider } from "@/components/context/FavoriteMoviesContext";
 import { ThemeProvider } from "@/context/ThemeContext";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Movie Time",
