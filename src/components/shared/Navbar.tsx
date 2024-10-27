@@ -1,7 +1,5 @@
 import Link from "next/link"
-
 import { ThemeSwap } from "../ui/ThemeSwap"
-
 
 const navlinks = [
   {
