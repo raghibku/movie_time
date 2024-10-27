@@ -34,7 +34,7 @@ const PopularMovies = () => {
                     popularMovieList.map((movie: any) => <MovieCard key={movie.id} movie={movie} showBtn={false} />)
                 }
             </div>
-            {isFetching && <div>Loading more movies...</div>}
+            {isFetching && <div>Loading more movies..</div>}
             {!isFetching && (
                 <div className='w-full flex justify-center items-center'>
                     <button onClick={loadMoreMovies} className="btn btn-primary mt-4">
