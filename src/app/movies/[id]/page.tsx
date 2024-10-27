@@ -4,7 +4,6 @@ import MovieCard from '@/components/shared/MovieCard';
 import ResponsiveDiv from '@/components/shared/ResponsiveDiv';
 import Title from '@/components/shared/Title';
 import { getMovieCast, getMovieDetails, getRelatedMovies } from '@/utils/getMovieDetails';
-import Image from 'next/image';
 import React from 'react'
 
 interface MovieDetailsProps {
