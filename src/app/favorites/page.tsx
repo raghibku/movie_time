@@ -1,4 +1,4 @@
-import FavoritePage from "./FavoritePage"
+import FavoritePage from "@/components/favorites/FavoritePage"
 
 const page = () => {
   return (

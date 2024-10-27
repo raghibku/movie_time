@@ -1,14 +1,14 @@
 'use client'
 
-import MovieCard from '@/components/shared/MovieCard';
-import Title from '@/components/shared/Title';
+
 import { getMoviesFromList } from '@/utils/handleLocalStorage';
 import React, { useEffect, useState } from 'react'
+import Title from '../shared/Title';
+import MovieCard from '../shared/MovieCard';
 
 const FavoritePage = () => {
     const [FavoriteMovies, setFavoriteMovies] = useState<any[]>([]);
     useEffect(() => {
-        // Only access localStorage in useEffect to ensure it's client-side only
         const movies = getMoviesFromList();
         if (movies) {
           setFavoriteMovies(movies);
